@@ -203,7 +203,7 @@ time <- 5*365  # 5 年換成天數
 lambda <- exp(eta)
 
 S_5yr <- exp(-(time/lambda)^k)  # 5年存活率
-H_5yr <- (time/lambda)^k         # 累積風險
+H_5yr <- -log(S_5yr)         # 累積風險
 
 eta <- as.numeric(eta)
 S_5yr <- as.numeric(S_5yr)
